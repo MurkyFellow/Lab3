@@ -14,7 +14,10 @@ public class Stack {
     }
     public void push(int value){
         if (index == values.length){
-            throw new StackException("Stack is full");
+            int[] nvalues = new int[git config list
+                    values.length * 2];
+            System.arraycopy(values, 0, nvalues, 0, values.length);
+            values = nvalues;
         }
         values[index] = value;
         index++;
